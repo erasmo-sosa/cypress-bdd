@@ -1,0 +1,23 @@
+version: 2.1
+
+# Define a job to be invoked later in a workflow.
+# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+jobs:
+  test:
+    docker:
+      - image: cypress/browsers:node16.16.0-chrome107-ff107
+    steps:
+      - checkout
+      - run:
+          name: install packages
+          command: npm ci
+      - run:
+          name: Run Tests
+          command: npx cypress run
+          
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  orb-free-workflow:
+    jobs:
+      - test
