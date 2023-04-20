@@ -12,7 +12,6 @@ And('User enters a valid username', () => {
 And('User enters a valid password', () => {
   cy.get('#pass').type('Erasmo2022')
   //cy.get('#pass').contains('Erasmo2022')
-  cy.wait(500)
 })
 
 When('Users clicks on the login button', () => {

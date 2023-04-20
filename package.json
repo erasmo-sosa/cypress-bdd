@@ -4,7 +4,6 @@
   "description": "Cypress with Cucumber Example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
     "cy:execute:tests": "cypress run",
     "on-chrome": "cypress run --browser chrome"
