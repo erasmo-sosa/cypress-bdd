@@ -14,7 +14,9 @@ jobs:
       - run:
           name: Run Tests
           command: npx cypress run
-          
+      - store_test_results:
+          path: test-results
+  
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
