@@ -17,7 +17,5 @@ module.exports = defineConfig({
   },
   "video":false,
   "defaultCommandTimeout": 5000,
-  "pageLoadTimeout": 30000,
-  //"ignoreTestFiles": ["*.js","*.md"],
-  //"testFiles": "**/*.{feature,features}"
+  "pageLoadTimeout": 30000
 });
